@@ -6,7 +6,7 @@
 The join may fail because one file stores IDs as integers while the other stores them as strings. This creates type mismatches, preventing matching records and potentially producing missing data. Reading all GTFS IDs as strings avoids this problem.
 
 4.Order-of-magnitude row-count comparison: per-route vs. per-stop logging over a semester, and what question the per-route choice makes harder::
-
+Over 12 weeks, 15-minute snapshots would generate approximately 40 million rows when logging 5,000 stop updates per snapshot. Logging only 27–40 routes would generate around 200,000–320,000 rows.
 However, per-route aggregation makes it harder to identify which specific stops experience repeated delays.
 
 5.Your proposed alternative to the delay chart's early-good/late-bad color encoding, and what decision it would change : i would use a symmetrical color scale based on the absolute delay from the scheduled time. Both significantly early and late services would appear red, while services close to schedule would appear green.
